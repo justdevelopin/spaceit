@@ -1,0 +1,67 @@
+// app/assets/stylesheets/_form.scss
+
+.form-signup {
+  max-width: 500px;
+  margin: auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  .form-inputs,
+  .form-actions {
+    margin-top: 20px;
+  }
+
+  .form-control {
+    border-radius: 0.25rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+
+    &:hover {
+      background-color: darken(#007bff, 10%);
+    }
+  }
+}
+
+.form-signup {
+  max-width: 500px; 
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+
+  h2 {
+    color: #333;
+    margin-bottom: 30px;
+  }
+
+  .form-inputs {
+    margin-top: 10px;
+
+    .form-control {
+      margin-bottom: 15px;
+      border: 1px solid #ced4da;
+    }
+  }
+
+  .form-actions {
+    margin-top: 30px;
+
+    .btn-submit {
+      padding: 12px;
+      background-color: #28a745; // Changed button color
+      &:hover {
+        background-color: darken(#28a745, 10%);
+      }
+    }
+  }
+}
