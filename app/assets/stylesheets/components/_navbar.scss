@@ -1,13 +1,14 @@
 .nav {
   height: 12rem;
   background-color: #061907;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 0 2rem 0 #06190772;
+  z-index: 100;
 }
 
 .logo {
