@@ -47,6 +47,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_143934) do
   end
 
   create_table "spaces", force: :cascade do |t|
+    t.string "name"
     t.text "description"
     t.string "address"
     t.integer "price"
