@@ -10,5 +10,4 @@ class SpacesController < ApplicationController
   def create
     @space = space.new
   end
-
 end
