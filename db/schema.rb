@@ -18,32 +18,32 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_143934) do
     t.integer "total_price"
     t.date "starting_date"
     t.date "end_date"
-    t.bigint "users_id", null: false
-    t.bigint "spaces_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "space_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["spaces_id"], name: "index_bookings_on_spaces_id"
-    t.index ["users_id"], name: "index_bookings_on_users_id"
+    t.index ["space_id"], name: "index_bookings_on_space_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "bookmarks", force: :cascade do |t|
-    t.bigint "users_id", null: false
-    t.bigint "spaces_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "space_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["spaces_id"], name: "index_bookmarks_on_spaces_id"
-    t.index ["users_id"], name: "index_bookmarks_on_users_id"
+    t.index ["space_id"], name: "index_bookmarks_on_space_id"
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.string "comment"
-    t.bigint "users_id", null: false
-    t.bigint "spaces_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "space_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["spaces_id"], name: "index_reviews_on_spaces_id"
-    t.index ["users_id"], name: "index_reviews_on_users_id"
+    t.index ["space_id"], name: "index_reviews_on_space_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "spaces", force: :cascade do |t|
@@ -72,11 +72,11 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_143934) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bookings", "spaces", column: "spaces_id"
-  add_foreign_key "bookings", "users", column: "users_id"
-  add_foreign_key "bookmarks", "spaces", column: "spaces_id"
-  add_foreign_key "bookmarks", "users", column: "users_id"
-  add_foreign_key "reviews", "spaces", column: "spaces_id"
-  add_foreign_key "reviews", "users", column: "users_id"
+  add_foreign_key "bookings", "spaces"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookmarks", "spaces"
+  add_foreign_key "bookmarks", "users"
+  add_foreign_key "reviews", "spaces"
+  add_foreign_key "reviews", "users"
   add_foreign_key "spaces", "users"
 end
