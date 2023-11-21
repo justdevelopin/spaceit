@@ -1,7 +1,9 @@
-<!-- app/views/spaces/index.html.erb -->
-<h1>Camping Spaces</h1>
-
 <h2>Camping Spaces</h2>
-<% @spaces.each do |space| %>
-  <p><%= space.name %> - <%= space.description %></p>
-<% end %>
+<div class="spaces-container">
+  <% @spaces.each do |space| %>
+    <div class="space-item">
+      <p class="space-name"><%= space.name %></p>
+      <p class="space-description"><%= space.description %></p>
+    </div>
+  <% end %>
+</div>
