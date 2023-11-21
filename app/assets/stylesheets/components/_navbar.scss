@@ -1,12 +1,71 @@
-.navbar-lewagon {
+.nav {
+  height: 12rem;
+  background-color: #061907;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: white;
+  box-shadow: 0 0 2rem 0 #06190772;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.logo {
+  max-height: 19rem;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-btns {
+  transform: translateY(-100%);
+}
+
+.btn-login, .btn-sign-up {
+  font-size: 2rem;
+  padding: 1rem 3rem;
+  transition: 0.2s;
+  text-decoration: none;
+  border-radius: 1.4rem;
+  font-weight: bold;
+}
+
+.btn-login {
+  margin-right: 7rem;
+  color: #e6e8e6;
+  box-shadow: inset 0 0 0 2px #e6e8e6;
+  cursor: pointer;
+    &:hover {
+      background-color: #e6e8e6;
+      color: #061907;
+    }
+}
+
+.btn-sign-up {
+  margin-right: 1rem;
+  color: #061907;
+  background-color: #e6e8e6;
+    &:hover {
+      color: #061907;
+      background-color: #b4bab5;
+      box-shadow: inset 0 0 0 2px #b4bab5;
+    }
+}
+
+.nav-links {
+  display: flex;
+  gap: 10rem;
+  transform: translateY(-40%);
+
+}
+
+.nav-link {
+  font-size: 2rem;
+  padding: 2rem 3rem;
+  transition: 0.2s;
+  text-decoration: none;
+  font-weight: bold;
+  color: #e6e8e6;
+  cursor: pointer;
+    &:hover {
+      color: #b4bab5;
+      box-shadow: inset 0 0.4rem 0 0rem #b4bab5;
+    }
 }

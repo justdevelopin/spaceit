@@ -31,7 +31,7 @@ end
 
 def random_booking(space, user)
   starting_date = Faker::Date.between(from: '2023-11-01', to: '2023-11-30')
-  end_date = Faker::Date.between(from: '2023-11-01', to: '2023-11-31')
+  end_date = Faker::Date.between(from: '2023-11-01', to: '2023-11-30')
   num_days = (end_date - starting_date).to_i
 
   Booking.create!(
