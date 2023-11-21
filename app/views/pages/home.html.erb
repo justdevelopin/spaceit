@@ -1,70 +1,19 @@
-<div class="banner">
-  <h1 class="text-center">SpaceIt</h1>
-  <h2 clas="text-center">We are the leaders in renting spaces in nature!</h2>
-  <input type="text" placeholder="Search for a Space">
-  <a href="url">Dates</a>
-  <a href="url">Search</a>
+<div id="homepage">
+  <header class="banner">
+    <h1 class="text-center">SpaceIt</h1>
+    <h2 clas="text-center">We are the leaders in renting spaces in nature!</h2>
+    <input type="text" placeholder="Search">
+    <a href="url">Dates</a>
+    <a href="url">Search</a>
 
+    <%# <div class="container">
+    </div> %>
+  </header>
 
-  <%# <div class="container">
-  </div> %>
-</div>
-
-<div class="container">
-
-  <!-- Full-width images with number text -->
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-      <img src="img_image5.jpeg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-      <img src="img_image6.jpeg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-      <img src="img_image10.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-      <img src="img_image11.jpeg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-      <img src="img_image12.jpeg" style="width:100%">
-  </div>
-
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-  <!-- Image text -->
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <!-- Thumbnail images -->
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="img_image5.jepg" style="width:100%" onclick="currentSlide(1)" alt="Picknick">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_image6.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Tent on Hill">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_image10.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Snowy mountain">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_image11.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Family time">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_image12.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Star sky">
-    </div>
-    </div>
-  </div>
+  <main>
+    <%= image_tag "image6.jpg" %>
+    <input type="text" placeholder="Discover">
+    <%= image_tag "image12.jpg" %>
+    <input type="text" placeholder="Discover">
+  </main>
 </div>
