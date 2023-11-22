@@ -5,8 +5,8 @@
       <div class="show-price-section"></div>
     </div>
     <div class="show-description-column">
-      <h3 class="show-space-title">Beautiful land</h3>
-      <p class="show-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus quaerat sit, veniam similique a pariatur. Tempora repellendus vero, quibusdam neque voluptatibus nulla a nostrum eum, eius corporis saepe numquam laudantium.</p>
+      <h3 class="show-space-title"><%= @space.name %></h3>
+      <p class="show-description"><%= @space.description %></p>
       <div class="show-details">
         <%= simple_form_for [@space ,@booking] do |f| %>
           <%= f.input :starting_date,

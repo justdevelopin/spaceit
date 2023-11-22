@@ -9,6 +9,12 @@
 #   end
 require 'faker'
 
+Review.destroy_all
+Bookmark.destroy_all
+Booking.destroy_all
+Space.destroy_all
+User.destroy_all
+
 def random_user
   User.create!(
     email: Faker::Internet.unique.email,
@@ -21,6 +27,7 @@ end
 
 def random_space(user)
   Space.create!(
+    name: Faker::Name.name,
     description: Faker::Hipster.sentence(word_count: 8),
     address: Faker::Address.street_address,
     price: rand(30..100),
