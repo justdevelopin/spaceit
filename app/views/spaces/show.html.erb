@@ -5,18 +5,22 @@
       <div class="show-price-section"></div>
     </div>
     <div class="show-description-column">
-      <h3 class="show-space-title">Beautiful land</h3>
-      <p class="show-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus quaerat sit, veniam similique a pariatur. Tempora repellendus vero, quibusdam neque voluptatibus nulla a nostrum eum, eius corporis saepe numquam laudantium.</p>
+      <h3 class="show-space-title"><%= @space.name %></h3>
+      <p class="show-description"><%= @space.description %></p>
+      <p class="show-address"><strong>Address: </strong><%= @space.address %></p>
       <div class="show-details">
         <%= simple_form_for [@space ,@booking] do |f| %>
           <%= f.input :starting_date,
               as: :string,
-              input_html: { data: { controller: "datepicker" } } %>
+              input_html: { data: { controller: "datepicker" }, class:"input" } %>
           <%= f.input :end_date,
               as: :string,
-              input_html: { data: { controller: "datepicker" } } %>
+              input_html: { data: { controller: "datepicker" },  class:"input"  } %>
         <% end %>
-        <p class="show-price">$12.99</p>
+        <div class="show-price-container">
+        <p class="show-price">$<%= @space.price %></p>
+        <span>(Taxes are not included)</span>
+        </div>
         <%= link_to "Book", space_path , class: "show-book-btn" %>
       </div>
     </div>
