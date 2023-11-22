@@ -3,5 +3,12 @@ class SpacesController < ApplicationController
   def index
     @spaces = Space.all
   end
-  # other actions
+
+
+private
+
+def space_params
+  params.require(:space).permit(:name, :description, :image, :other_attributes)
+end
+
 end

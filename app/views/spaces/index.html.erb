@@ -1,9 +1,21 @@
-<h2>Camping Spaces</h2>
 <div class="spaces-container">
   <% @spaces.each do |space| %>
-    <div class="space-item">
-      <p class="space-name"><%= space.name %></p>
-      <p class="space-description"><%= space.description %></p>
+    <div class="space-card">
+      <% if space.image.attached? %>
+        <img class="space-image" src="<%= url_for(space.image) %>" alt="Image of <%= space.name %>">
+      <% end %>
+      <div class="space-content">
+        <div class="space-header">
+          <button class="space-button"><%= space.name %></button>
+          <div class="space-rating">
+            rating:
+              <% ratings_array = space.reviews.pluck(:rating)  %>
+              <% sum = ratings_array.reduce(&:+) %>
+              <% average = sum.to_f / space.reviews.count %>
+              <%= average unless average.nan? %>
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
