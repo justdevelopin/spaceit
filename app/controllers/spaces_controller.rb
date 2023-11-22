@@ -9,10 +9,6 @@ class SpacesController < ApplicationController
     @booking = Booking.new
   end
 
-  def index
-    @spaces = spaces.all(params[:id])
-  end
-
   def create
     @space = space.new
   end

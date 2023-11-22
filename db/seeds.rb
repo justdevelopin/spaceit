@@ -26,14 +26,19 @@ def random_user
 end
 
 def random_space(user)
-  Space.create!(
-    name: Faker::Name.name, 
+  space = Space.new(
+    name: Faker::Name.name,
     description: Faker::Hipster.sentence(word_count: 8),
     address: Faker::Address.street_address,
     price: rand(30..100),
     features: "fire pit, picnic table, restrooms",
     user: user
   )
+  image_path = Rails.root.join("app/assets/images/image1.jpg").open
+  space.image.attach( io: image_path, filename:"image1.jpg")
+  space.save
+
+  return space
 end
 
 def random_booking(space, user)
