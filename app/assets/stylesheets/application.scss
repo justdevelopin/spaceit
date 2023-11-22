@@ -12,7 +12,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
 @import 'spaces';
+
+@import 'components/popup';
+
 
 * {
   padding: 0;
