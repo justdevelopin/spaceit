@@ -1,32 +1,38 @@
 <div id="homepage">
-  <header class="banner">
+  <div class="banner">
+  <div class="container">
     <h1 class="text-center">SpaceIt</h1>
     <h2 class="text-center">We are the leaders in renting spaces in nature!</h2>
-    <input type="text" placeholder="Search space">
-    <a href="url">Dates</a>
-    <button type="button">Search!</button>
 
-    <%# <div class="container">
-    </div> %>
-  </header>
+    <form action="">
+      <input type="text-align" placeholder="Search space">
+      <a href="url">Dates</a>
+      <button type="button">Search!</button>
+    </form>
+  </div>
 
-  <main>
-    <div class="home-list">
+    <%# <div class="container"> %>
+  </div>
+
+  <main class="container">
+
+    <div class="home-card">
       <%= image_tag "norway.jpeg" %>
-      <div id="home-list-right">
-        <em>Enjoy the view over the cozy town of</em>
-        <strong>Bergen - Norway</strong>
-        <button type="button">Discover!</button>
+      <div class="home-card-info">
+        <p class="text-center">Enjoy the view over the cozy town of <strong>Bergen - Norway</strong></p>
+        <a href="url">Discover!</a>
       </div>
     </div>
 
-    <div class="home-list">
-      <%= image_tag "image12.jpg" %>
-      <div id="home-list-left">
-        <em>Enjoy a beautful Sky full of starts in </em>
-        <strong>Nevada</strong>
-        <button type="button">Discover!</button>
+    <div class="home-card">
+      <div class="home-card-info">
+        <p class="text-center">Enjoy the magic star sky in <strong>Nevada</strong></p>
+        <a href="url">Discover!</a>
       </div>
+      <%= image_tag "image12.jpg" %>
     </div>
+
+    <%= video_tag "norwayvideo.mp4", autoplay: true, muted: true, loop: true, class: "video-element" %>
+
   </main>
 </div>
