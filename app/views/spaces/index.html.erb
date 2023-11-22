@@ -1,3 +1,7 @@
+
+<%= link_to "Add New Space",new_user_registration_path, class: "btn-sign-up btn-add"  %>
+
+
 <div class="spaces-container">
   <% @spaces.each do |space| %>
     <div class="space-card">
@@ -6,14 +10,15 @@
       <% end %>
       <div class="space-content">
         <div class="space-header">
-          <%= link_to space.name, space_path(space), class: "space-button" %>
-          <p class="space-address"><%= space.address %></p> <!-- Address added here -->
+          <div class="spaces2">
+            <%= link_to space.name, space_path(space), class: "space-button" %>
+            <p class="space-address"><%= space.address %></p>
+          </div>
           <div class="space-rating">
-            rating:
             <% ratings_array = space.reviews.pluck(:rating)  %>
             <% sum = ratings_array.reduce(&:+) %>
             <% average = sum.to_f / space.reviews.count %>
-            <%= average.round(2) unless average.nan? %>
+            <%= "Rating: #{average.round(2)}" unless average.nan? %>
           </div>
         </div>
       </div>

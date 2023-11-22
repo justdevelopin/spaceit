@@ -13,9 +13,13 @@ class SpacesController < ApplicationController
     @space = space.new
   end
 
+  def new
+    @space = Space.new
+
   private
 
   def space_params
     params.require(:space).permit(:name, :description, :image, :other_attributes)
   end
+end
 end

@@ -31,7 +31,7 @@
 
 .space-header {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
 }
 
@@ -48,6 +48,48 @@
 }
 
 .space-rating {
+  display: flex;
+  justify-content: center;
   font-size: 15px;
   color: #000000;
+}
+
+.add-space-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.add-space-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+
+
+}
+
+.btn-add {
+color: #e6e8e6;
+display: flex;
+justify-content: center;
+text-align: center;
+  background-color: #65a179;
+  &:hover {
+    background-color: #a9d1b6;
+    box-shadow: inset 0 0 0 2px #a9d1b6
+  }
+}
+
+.spaces2 {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+  a {
+    width: 100%;
+  }
+
 }
