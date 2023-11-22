@@ -2,17 +2,18 @@
   <% @spaces.each do |space| %>
     <div class="space-card">
       <% if space.image.attached? %>
-        <img class="space-image" src="<%= url_for(space.image) %>" alt="Image of <%= space.name %>">
+        <img class="space-image" src="https://source.unsplash.com/random/?camping,<%= ('a'...'z').to_a.sample %>" alt="Image of <%= space.name %>">
       <% end %>
       <div class="space-content">
         <div class="space-header">
-          <button class="space-button"><%= space.name %></button>
+          <%= link_to space.name, space_path(space), class: "space-button" %>
+          <p class="space-address"><%= space.address %></p> <!-- Address added here -->
           <div class="space-rating">
             rating:
-              <% ratings_array = space.reviews.pluck(:rating)  %>
-              <% sum = ratings_array.reduce(&:+) %>
-              <% average = sum.to_f / space.reviews.count %>
-              <%= average unless average.nan? %>
+            <% ratings_array = space.reviews.pluck(:rating)  %>
+            <% sum = ratings_array.reduce(&:+) %>
+            <% average = sum.to_f / space.reviews.count %>
+            <%= average.round(2) unless average.nan? %>
           </div>
         </div>
       </div>
