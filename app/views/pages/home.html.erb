@@ -1,19 +1,32 @@
 <div id="homepage">
   <header class="banner">
     <h1 class="text-center">SpaceIt</h1>
-    <h2 clas="text-center">We are the leaders in renting spaces in nature!</h2>
-    <input type="text" placeholder="Search">
+    <h2 class="text-center">We are the leaders in renting spaces in nature!</h2>
+    <input type="text" placeholder="Search space">
     <a href="url">Dates</a>
-    <a href="url">Search</a>
+    <button type="button">Search!</button>
 
     <%# <div class="container">
     </div> %>
   </header>
 
   <main>
-    <%= image_tag "image6.jpg" %>
-    <input type="text" placeholder="Discover">
-    <%= image_tag "image12.jpg" %>
-    <input type="text" placeholder="Discover">
+    <div class="home-list">
+      <%= image_tag "norway.jpeg" %>
+      <div id="home-list-right">
+        <em>Enjoy the view over the cozy town of</em>
+        <strong>Bergen - Norway</strong>
+        <button type="button">Discover!</button>
+      </div>
+    </div>
+
+    <div class="home-list">
+      <%= image_tag "image12.jpg" %>
+      <div id="home-list-left">
+        <em>Enjoy a beautful Sky full of starts in </em>
+        <strong>Nevada</strong>
+        <button type="button">Discover!</button>
+      </div>
+    </div>
   </main>
 </div>
