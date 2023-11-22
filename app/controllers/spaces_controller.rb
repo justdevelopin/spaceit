@@ -4,11 +4,22 @@ class SpacesController < ApplicationController
     @spaces = Space.all
   end
 
+  def show
+    @space = Space.find(params[:id])
+    @booking = Booking.new
+  end
 
-private
+  def index
+    @spaces = spaces.all(params[:id])
+  end
 
-def space_params
-  params.require(:space).permit(:name, :description, :image, :other_attributes)
-end
+  def create
+    @space = space.new
+  end
 
+  private
+
+  def space_params
+    params.require(:space).permit(:name, :description, :image, :other_attributes)
+  end
 end
