@@ -14,7 +14,7 @@
   }
 
   .form-control {
-    border-radius: 0.25rem;
+    border-radius: 8px;
   }
 
   .btn-submit {
@@ -23,7 +23,7 @@
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 4px;
 
     &:hover {
       background-color: darken(#007bff, 10%);
@@ -37,7 +37,7 @@
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #f8f9fa;
-  border-radius: 0.5rem;
+  border-radius: 4px;
 
   h2 {
     color: #333;
