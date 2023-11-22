@@ -1,0 +1,27 @@
+
+<%= link_to "Add New Space",new_user_registration_path, class: "btn-sign-up btn-add"  %>
+
+
+<div class="spaces-container">
+  <% @spaces.each do |space| %>
+    <div class="space-card">
+      <% if space.image.attached? %>
+        <img class="space-image" src="https://source.unsplash.com/random/?camping,<%= ('a'...'z').to_a.sample %>" alt="Image of <%= space.name %>">
+      <% end %>
+      <div class="space-content">
+        <div class="space-header">
+          <div class="spaces2">
+            <%= link_to space.name, space_path(space), class: "space-button" %>
+            <p class="space-address"><%= space.address %></p>
+          </div>
+          <div class="space-rating">
+            <% ratings_array = space.reviews.pluck(:rating)  %>
+            <% sum = ratings_array.reduce(&:+) %>
+            <% average = sum.to_f / space.reviews.count %>
+            <%= "Rating: #{average.round(2)}" unless average.nan? %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

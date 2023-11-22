@@ -1,5 +1,9 @@
 <section class="section-show">
+
   <div class="show-container">
+
+  <div class="show-container" data-controller="popup">
+
     <div class="show-photo-column">
       <%= image_tag "image5.jpg", class:"show-photo"%>
       <div class="show-price-section"></div>
@@ -21,8 +25,21 @@
         <p class="show-price">$<%= @space.price %></p>
         <span>(Taxes are not included)</span>
         </div>
-        <%= link_to "Book", space_path , class: "show-book-btn" %>
+        <%= link_to "Book", '#',
+          data: { action: "click->popup#togglePopup" },
+          class: "show-book-btn" %>
       </div>
     </div>
+    <div class="popup" id="popup"  data-popup-target="popup">
+  <div class="popup-content">
+    <%= image_tag "tick_icon.png" , alt: "Success Tick Image", class: "tick-icon"%>
+    <h2>Thank You!</h2>
+    <p>Your booking was made successfully!</p>
+    <p><strong>Name:</strong> <%= @space.name %></p>
+    <p><strong>Address:</strong> <%= @space.address %></p>
+    <p><strong>Price:</strong> $<%= @space.price %> (Taxes are not included)</p>
+    <button type="button" data-action="click->popup#closePopup">Close</button>
+  </div>
+  </div>
   </div>
 </section>
