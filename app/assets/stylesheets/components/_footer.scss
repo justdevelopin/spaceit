@@ -7,25 +7,29 @@
 
 .footer-logo {
   height: 200px;
-  transform: translateY(-10%);
-
+  transform: translateX(5%);
 }
 
 .footer-centered {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
   box-shadow: 0 0 5rem 0 #0619075f;
 }
 
 .footer-text {
   // font-size: 2rem;
-  padding: 40px;
+  padding: 40px 0;
   color: #cdd1cd;
-  max-width: 200px;
+  // max-width: 200px;
 }
 
 .logo-facebook {
   color:aliceblue;
   // font-size: 40rem;
+}
+
+.footer-media-logo {
+  height: 60px;
+  margin-right: 20px;
 }
