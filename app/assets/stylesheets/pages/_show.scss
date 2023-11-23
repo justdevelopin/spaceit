@@ -1,18 +1,20 @@
 
 
 .section-show {
-  min-height: 100vh;
+  // min-height: 100vh;
 }
 
 .show-container {
   display: flex;
-  gap: 40px;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
   // margin-top: 20rem;
   // margin-inline: 3rem;
 }
 
 .show-photo-column {
-  width: 50vw;
+  width: 45vw;
 }
 
 .show-photo {
