@@ -1,0 +1,11 @@
+<div class="popup" id="popup"  data-popup-target="popup">
+  <div class="popup-content">
+    <%= image_tag "tick_icon.png", alt: "Success Tick Image", class: "tick-icon" %>
+    <h2>Thank You!</h2>
+    <p>Your booking was made successfully!</p>
+    <p><strong>Name:</strong> <%= @space.name %></p>
+    <p><strong>Address:</strong> <%= @space.address %></p>
+    <p><strong>Price:</strong> $<%= @space.price %> /night (Taxes are not included)</p>
+    <button type="button" data-action="click->popup#closePopup">Close</button>
+  </div>
+</div>

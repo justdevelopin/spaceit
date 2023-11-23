@@ -1,0 +1,13 @@
+<%= simple_form_for [@space, @booking], html: { data: { popup_target: "form" } } do |f| %>
+  <%= f.input :starting_date,
+      as: :string,
+      input_html: { data: { controller: "datepicker" }, class: "input"} %>
+  <%= f.input :end_date,
+      as: :string,
+      input_html: { data: { controller: "datepicker" }, class: "input" } %>
+  <div class="show-price-container">
+    <p class="show-price">$<%= @space.price %></p>
+    <span>(Taxes are not included)</span>
+  </div>
+  <%= f.button :submit, "Book", data: { action: "click->popup#togglePopup" }, class: "show-book-btn" %>
+<% end %>
