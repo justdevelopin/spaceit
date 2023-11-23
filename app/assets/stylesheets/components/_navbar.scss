@@ -15,6 +15,9 @@
 .logo {
   // max-height: 120px;
   height: 100%;
+  transform: scale(4.4);
+  padding-top: 14px;
+  padding-left: 15px;
 }
 
 .btn-login, .btn-sign-up {
@@ -50,7 +53,7 @@
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 100px;
   // transform: translateY(-40%);
 }
 
