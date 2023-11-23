@@ -1,0 +1,35 @@
+
+.new-space-form {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  border-radius: 4px;
+
+  h2 {
+    color: #333;
+    margin-bottom: 30px;
+  }
+
+  .form-inputs {
+    margin-top: 10px;
+
+    .form-control {
+      margin-bottom: 15px;
+      border: 1px solid #ced4da;
+    }
+  }
+
+  .form-actions {
+    margin-top: 30px;
+
+    .btn-submit {
+      padding: 12px;
+      background-color: #28a745;
+      &:hover {
+        background-color: darken(#28a745, 10%);
+      }
+    }
+  }
+}

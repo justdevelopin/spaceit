@@ -8,6 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 require 'faker'
+require 'open-uri'
 
 Review.destroy_all
 Bookmark.destroy_all
@@ -36,7 +37,7 @@ def random_space(user)
     features: "fire pit, picnic table, restrooms",
     user: user
   )
-  image_path = Rails.root.join("app/assets/images/image1.jpg").open
+  image_path = URI.open("https://source.unsplash.com/random/?camping,#{('a'...'z').to_a.sample}")
   space.image.attach( io: image_path, filename:"image1.jpg")
   space.save
 

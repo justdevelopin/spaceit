@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  resources :spaces, except: [:new] do
+
+  resources :spaces do
     resources :bookings, only: [:create]
     resources :reviews, only: [:create]
   end

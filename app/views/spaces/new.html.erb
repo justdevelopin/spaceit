@@ -1,39 +1,34 @@
-<h1>Add a New Space</h1>
 
-<%= form_with model: @space, local: true do |form| %>
-  <% if @space.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@space.errors.count, "error") %> prohibited this space from being saved:</h2>
+<div class="form-signup">
+  <h1>Add a New Space</h1>
+  <%= form_with model: @space, local: true, html: { class: "form-inputs" } do |form| %>
+    <% if @space.errors.any? %>
+      <div id="error_explanation">
+      </div>
+    <% end %>
 
-      <ul>
-      <% @space.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, id: :space_name, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description, id: :space_description, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :price_per_night %>
+      <%= form.number_field :price, id: :space_price, step: 0.01, min: 0, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :image %>
+      <%= form.file_field :image, id: :space_image, class: "form-control" %>
+    </div>
+
+    <div class="form-actions">
+      <%= form.submit "Add Space", class: "btn-submit" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :space_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :space_description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, id: :space_price, step: 0.01, min: 0 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image, id: :space_image %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

@@ -7,7 +7,7 @@
 }
 
 .space-card {
-  background-color: #c9c6c6;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow: hidden;
@@ -47,30 +47,6 @@
   text-decoration: none;
 }
 
-.space-rating {
-  display: flex;
-  justify-content: center;
-  font-size: 15px;
-  color: #000000;
-}
-
-.add-space-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.add-space-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-
-
-}
-
 .btn-add {
 color: #e6e8e6;
 display: flex;
@@ -91,5 +67,45 @@ text-align: center;
   a {
     width: 100%;
   }
-
 }
+
+.add-space-button {
+  padding: 10px 20px;
+  background-color: #65a179;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 100px;
+  &:hover {
+    background-color: #a9d1b6;
+    box-shadow: inset 0 0 0 2px #a9d1b6
+  }
+}
+
+  .add-space-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
+
+  }
+
+
+  .space-rating {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+
+
+  .fa-star, .fa-star-half-stroke {
+    margin-right: 2px;
+    color: gold;
+  }
+
+  .fa-star[style*="color: lightgray;"] {
+    color: lightgray;
+  }
+  }
