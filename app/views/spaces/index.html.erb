@@ -5,9 +5,7 @@
 <div class="spaces-container">
   <% @spaces.each do |space| %>
     <div class="space-card">
-      <% if space.image.attached? %>
-        <img class="space-image" src="https://source.unsplash.com/random/?camping,<%= ('a'...'z').to_a.sample %>" alt="Image of <%= space.name %>">
-      <% end %>
+      <img class="space-image" src="https://source.unsplash.com/random/?camping,<%= ('a'...'z').to_a.sample %>" alt="Image of <%= space.name %>">
       <div class="space-content">
         <div class="space-header">
           <div class="spaces2">

@@ -2,15 +2,20 @@
 class SpacesController < ApplicationController
   def index
     @spaces = Space.all
+    if params[:query].present?
+      @spaces = @spaces.where("name ILIKE :query OR address ILIKE :query", query: "%#{params[:query]}%")
+    end
   end
 
   def show
     @space = Space.find(params[:id])
     @booking = Booking.new
+    @reviews = @space.reviews
+    @review = Review.new
   end
 
   def create
-    @space = space.new
+    @space = Space.new
   end
 
   def new
