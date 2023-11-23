@@ -9,20 +9,35 @@
     background-size: cover;
     //background-color: #b8d9c3;
     height: 40vh;
+    form {
+    text-align: center;
+    letter-spacing: inherit;
+    font-family: "HCo Gotham SSm",sans-serif;
+    }
+
+    input {
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 100;
+    }
   }
 
   h1{
-    font-size: 60px;
-    font-weight: bolder;
+    font-size: 40px;
+    //font-weight: bolder;
+    color: white;
   }
+
   h2 {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 40px;
+    //font-weight: bolder;
+    color: white;
   }
 
   main {
     .home-card {
-      padding: 10px;
+      padding: 50px;
       width: 100%;
       font-size: 33px;
       display: flex;
@@ -39,13 +54,64 @@
         justify-content: center;
         align-items: center;
         padding: 30px;
-        background-color: #cdd1cd;
+        background-color: white;
         border-radius: 20px;
+        font-size: 20px;
+        text-align: center;
       }
 
       .video-element {
         position: fixed;
       }
+
     }
   }
+  #video-banner {
+    width: 100%;
+    height: auto;
+    width: 100vw;
+    height: 477px;
+    object-fit: cover;
+    object-position: center;
+    margin-top: -50px;
+  }
+
+  .video-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+  }
+
+  .video-text h1 {
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .video-text p {
+    font-size: 2em;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .video-text a {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+    input {
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 100;
+    }
 }
