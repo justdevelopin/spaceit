@@ -25,11 +25,13 @@ def random_user
   )
 end
 
+
 def random_space(user)
+  cities = ["Gran Canyon, Nevada", "Newark, Great Britain", "Fort Williams, Great Britain", "Sitges, Spain", "Castelldefels, Spain", "Lleida, Spain", "Bergen, Norway", "Formentera, Spain", "Nevada, USA", "Seez, France", "Nantes, France", "Belpasso, Italy", "Torrenova, France"]
   space = Space.new(
     name: Faker::Name.name,
     description: Faker::Hipster.sentence(word_count: 8),
-    address: Faker::Address.street_address,
+    address: "#{Faker::Address.street_address}, #{cities.sample}",
     price: rand(30..100),
     features: "fire pit, picnic table, restrooms",
     user: user
