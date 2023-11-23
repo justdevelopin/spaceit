@@ -2,6 +2,9 @@
 class SpacesController < ApplicationController
   def index
     @spaces = Space.all
+    if params[:query].present?
+      @spaces = @spaces.where("name ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def show

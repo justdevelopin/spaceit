@@ -15,14 +15,6 @@
     font-family: "HCo Gotham SSm",sans-serif;
     }
 
-    button {
-    padding: 8px 16px;
-    transition: 0.2s;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    }
-
     input {
     padding: 8px 16px;
     text-decoration: none;
@@ -35,24 +27,12 @@
     font-size: 40px;
     //font-weight: bolder;
     color: white;
-    text-shadow: -1px 1px 0 grey,
-                1px 1px 0 grey,
-                1px -1px 0 grey,
-                -1px -1px 0 grey;
-    font-weight: 700;
-    font-family: "HCo Gotham SSm",sans-serif;
   }
 
   h2 {
     font-size: 40px;
     //font-weight: bolder;
     color: white;
-    text-shadow: -1px 1px 0 grey,
-                1px 1px 0 grey,
-                1px -1px 0 grey,
-                -1px -1px 0 grey;
-    font-weight: 700;
-    font-family: "HCo Gotham SSm",sans-serif;
   }
 
   main {
@@ -76,11 +56,61 @@
         padding: 30px;
         background-color: white;
         border-radius: 20px;
+        font-size: 20px;
+        text-align: center;
       }
 
       .video-element {
         position: fixed;
       }
+
     }
   }
+  #video-banner {
+    width: 100%;
+    height: auto;
+    width: 100vw;
+    height: 477px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .video-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+  }
+
+  .video-text h1 {
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .video-text p {
+    font-size: 2em;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .video-text a {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+    input {
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 100;
+    }
 }
