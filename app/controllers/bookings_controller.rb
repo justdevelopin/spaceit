@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = current_user.bookings
+  end
 
   def create
     @booking = Booking.new(booking_params)
@@ -36,5 +37,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:starting_date, :end_date)
   end
-end
 end
