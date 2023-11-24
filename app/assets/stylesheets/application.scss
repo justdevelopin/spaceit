@@ -42,10 +42,17 @@ body {
   min-height: 100vh;
 }
 .profile-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
+  min-height: 100vh;
+
+  width: 100vw;
   text-align: center;
+
+  section {
+    width: 80%;
+    min-height: 235px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
 }
 
 .user-bookings, .user-spaces {
@@ -81,10 +88,15 @@ h1, h2 {
   margin-bottom: 10px;
 }
 
-.profile-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
+.avatar-extra-large {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
+.profile-section {
+  height: 500px;
+
+
+}
