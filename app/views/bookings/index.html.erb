@@ -1,0 +1,9 @@
+<%# app/views/bookings/index.html.erb %>
+<% if @bookings.any? %>
+  <% @bookings.each do |booking| %>
+    <!-- Display each booking -->
+    <!-- You can add HTML here to style how each booking is displayed -->
+  <% end %>
+<% else %>
+  <p>You have no bookings.</p>
+<% end %>

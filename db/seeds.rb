@@ -17,13 +17,16 @@ Space.destroy_all
 User.destroy_all
 
 def random_user
-  User.create!(
+  user = User.new(
     email: Faker::Internet.unique.email,
     password: "password123",
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     phone_number: Faker::PhoneNumber.cell_phone
   )
+  user_pic = URI.open("https://source.unsplash.com/random/?person")
+  user.picture.attach( io: user_pic, filename: user.first_name )
+  user.save
 end
 
 
@@ -46,7 +49,7 @@ end
 
 def random_booking(space, user)
   starting_date = Faker::Date.between(from: '2023-11-01', to: '2023-11-30')
-  end_date = Faker::Date.between(from: '2023-11-01', to: '2023-11-30')
+  end_date = Faker::Date.between(from: '2023-11-30', to: '2023-12-01')
   num_days = (end_date - starting_date).to_i
 
   Booking.create!(
