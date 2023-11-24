@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   # Add this line for a non-nested route to handle the index action
   resources :bookings, only: [:index]
 
+
   # Other routes...
 end

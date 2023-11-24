@@ -1,0 +1,37 @@
+<div class="profile-container">
+  <h1><%= @user.name %>'s Profile</h1>
+
+  <section class="user-bookings">
+    <h2>My Bookings</h2>
+    <% if @bookings.any? %>
+      <ul class="bookings-list">
+        <% @bookings.each do |booking| %>
+          <li class="booking-item">
+            <!-- Booking details here -->
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <div class="no-content-card">
+        <p>You have no bookings.</p>
+      </div>
+    <% end %>
+  </section>
+
+  <section class="user-spaces">
+
+<h2>My Spaces</h2>
+<% if @spaces.any? %>
+  <ul class="spaces-list">
+    <% @spaces.each do |space| %>
+      <li class="space-item">
+        <h3><%= space.name %></h3> <!-- Use space.name here -->
+        <p><%= space.description %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <div class="no-content-card">
+    <p>You have not added any spaces.</p>
+  </div>
+<% end %>
