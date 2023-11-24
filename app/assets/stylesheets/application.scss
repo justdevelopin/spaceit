@@ -39,4 +39,64 @@ body {
   // min-height: 100vh;
   margin-top: 80px;
   // margin-bottom: 120px;
+  min-height: 100vh;
+}
+.profile-container {
+  min-height: 100vh;
+
+  width: 100vw;
+  text-align: center;
+
+  section {
+    width: 80%;
+    min-height: 235px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
+}
+
+.user-bookings, .user-spaces {
+  margin-top: 40px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.bookings-list, .spaces-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; // Center the cards
+  gap: 20px;
+}
+
+.booking-item, .space-item, .no-content-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  min-width: 200px; // Minimum width for smaller cards
+  max-width: 300px; // Maximum width to keep cards from getting too large
+  margin: 10px; // Margin for individual cards
+  background-color: #fff;
+}
+
+.booking-item h3, .space-item h3 {
+  color: #0275d8;
+  margin-bottom: 10px;
+}
+
+.avatar-extra-large {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-section {
+  height: 500px;
+
+
 }
