@@ -1,0 +1,34 @@
+
+<section class="section-bookmark">
+<div class="container">
+  <h4 class="bookmark-heading-nexttimeimmakingcomponents">Your favourite spaces</h4>
+
+  <div class="booking-card">
+  <% if @bookmarks.any? %>
+
+    <% @bookmarks.each do |bookmark| %>
+      <div class="bookmark-card">
+        <div class="bookmark-img-wrap">
+          <img src="https://source.unsplash.com/random/?camping,<%= ('a'...'z').to_a.sample %>" class="bookmark-img">
+        </div>
+        <div class="bookmark-card-info">
+          <h6 class="bookmark-name"><%= bookmark.space.name %></h6>
+          <p class="show-description"><%= bookmark.space.description %></p>
+          <p class="show-address"><strong class="strong">Address:</strong><%= bookmark.space.address %></p>
+          <p class="show-price">$<%= bookmark.space.price %></p>
+        </div>
+        <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete} do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+      </div>
+    <% end %>
+
+  <% else %>
+
+    <p class="no-bookmarks">You have no existing bookmarks. 🙁</p>
+
+  <% end %>
+  </div>
+
+</div>
+</section>

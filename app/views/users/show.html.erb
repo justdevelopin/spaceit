@@ -1,0 +1,47 @@
+<div class="profile-container container-fluid d-flex flex-column align-items-center">
+
+  <section class= "profile-section d-flex justify-content-around align-items-center">
+    <%= image_tag current_user.picture, class: "avatar-extra-large" %>
+    <div class="profile-info d-flex flex-column justify-column justify-content-center">
+      <p><%= @user.first_name %> <%= @user.last_name %> </p>
+      <p><%= @user.email %></p>
+      <p><%= @user.phone_number %></p>
+    </div>
+  </section>
+
+  <section class="user-bookings">
+    <h2>My Bookings</h2>
+    <% if @bookings.any? %>
+      <ul class="bookings-list">
+        <% @bookings.each do |booking| %>
+          <li class="booking-item">
+            <!-- Booking details here -->
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+        <p class= "text-center" >You have no bookings.</p>
+    <% end %>
+  </section>
+
+  <section class="user-spaces">
+
+    <h2>My Spaces</h2>
+    <% if @spaces.any? %>
+      <ul class="spaces-list">
+        <% @spaces.each do |space| %>
+          <li class="space-item">
+            <%= link_to space_path(space) do  %>
+              <h3><%= space.name %></h3>
+            <% end %>
+            <p><%= space.description %></p>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <div class="no-content-card">
+        <p>You have not added any spaces.</p>
+      </div>
+    <% end %>
+  </section>
+</div>

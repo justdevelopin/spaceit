@@ -1,3 +1,7 @@
+// GLOBAL PADDING NORMALIZER:
+html {
+  padding-top: 76px;
+}
 .nav {
   height: 80px;
   background-color: #061907;
@@ -63,6 +67,7 @@
 .nav-avatar, .nav-avatar-img {
   height: 50px;
   width: 50px;
+  object-fit: cover;
 }
 
 .nav-avatar {

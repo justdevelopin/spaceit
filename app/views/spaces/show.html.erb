@@ -1,23 +1,24 @@
-<section class="section-show">
-  <div class="show-container">
+<%# <div class="blur-bg d-none" id="blur" data-popup-target="blur"></div> %>
+<div data-controller="popup">
+  <%= render 'popup_booking' %>
 
-  <div class="show-container container" data-controller="popup">
-
-    <div class="show-photo-column">
-      <%= image_tag "image5.jpg", class:"show-photo"%>
-      <div class="show-price-section"></div>
-    </div>
-    <div class="show-description-column">
-      <h3 class="show-space-title"><%= @space.name %></h3>
-      <p class="show-description"><%= @space.description %></p>
-      <p class="show-address"><strong>Address: </strong><%= @space.address %></p>
-      <div class="show-details">
-        <%= render 'booking_form', space: @space, booking: @booking %>
+  <section class="section-show">
+    <div class="show-container">
+    <div class="show-container container">
+      <div class="show-photo-column">
+        <%= image_tag "image5.jpg", class:"show-photo"%>
+        <div class="show-price-section"></div>
+      </div>
+      <div class="show-description-column">
+        <h3 class="show-space-title"><%= @space.name %></h3>
+        <p class="show-description"><%= @space.description %></p>
+        <p class="show-address"><strong>Address: </strong><%= @space.address %></p>
+        <div class="show-details">
+          <%= render 'booking_form', space: @space, booking: @booking %>
+        </div>
+      </div>
       </div>
     </div>
-    <%= render 'popup_booking' %>
-    </div>
-  </div>
-</section>
-
-<%= render "reviews/reviews" %>
+    <%= render "reviews/reviews" %>
+  </section>
+</div>

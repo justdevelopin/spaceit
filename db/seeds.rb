@@ -17,13 +17,16 @@ Space.destroy_all
 User.destroy_all
 
 def random_user
-  User.create!(
+  user = User.new(
     email: Faker::Internet.unique.email,
     password: "password123",
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     phone_number: Faker::PhoneNumber.cell_phone
   )
+  user_pic = URI.open("https://source.unsplash.com/random/?person")
+  user.picture.attach( io: user_pic, filename: user.first_name )
+  user.save
 end
 
 

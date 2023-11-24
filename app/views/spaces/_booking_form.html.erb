@@ -7,7 +7,8 @@
       input_html: { data: { controller: "datepicker" }, class: "input" } %>
   <div class="show-price-container">
     <p class="show-price">$<%= @space.price %></p>
-    <span>(Taxes are not included)</span>
+    <span> per night (Taxes are not included)</span>
   </div>
   <%= f.button :submit, "Book", data: { action: "click->popup#togglePopup" }, class: "show-book-btn" %>
 <% end %>
+
