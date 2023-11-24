@@ -1,7 +1,11 @@
 <div id="homepage">
-<video autoplay muted loop id="video-banner">
-  <source src="<%= asset_url("bannervideo.mp4") %>" type="video/mp4">
-</video>
+
+<div class="gradient">
+
+  <video autoplay muted loop id="video-banner">
+    <source src="<%= asset_url("bannervideo.mp4") %>" type="video/mp4">
+  </video>
+</div>
 
 <div class="video-text">
   <h1>SpaceIt</h1>
@@ -24,18 +28,63 @@
       <%= image_tag "norway.jpeg" %>
       <div class="home-card-info">
         <p class="text-center"><strong>Enjoy the views over the Nordic fjords in Bergen - Norway</strong></p>
-        <p>Spectacular Scenery: Enjoy breathtaking views of majestic fjords surrounded by towering cliffs and lush greenery. The unique geography of Norway's fjords provides a stunning backdrop for your camping experience, creating an immersive connection with nature.<p>
-         <%= link_to "Discover!", spaces_path(query:"norway") %>
+        <p><strong>Spectacular Scenery:</strong> Enjoy breathtaking views of majestic fjords surrounded by towering cliffs and lush greenery. The unique geography of Norway's fjords provides a stunning backdrop for your camping experience, creating an immersive connection with nature.</p>
+          <%= link_to "Discover!", spaces_path(query:"Norway") %>
       </div>
     </div>
 
     <div class="home-card">
       <div class="home-card-info">
         <p class="text-center"><strong>Enjoy the magic star sky in Gran Canyon</strong></p>
-        <p>Stargazing Paradise: With vast stretches of open land and minimal light pollution in many areas, Nevada provides an exceptional opportunity for stargazing. Campers can enjoy clear night skies, spot constellations, and even catch a glimpse of the Milky Way, creating a magical and awe-inspiring experience.</p>
+        <p><strong> Stargazing Paradise:</strong> With vast stretches of open land and minimal light pollution in many areas, Nevada provides an exceptional opportunity for stargazing. Campers can enjoy clear night skies, spot constellations, and even catch a glimpse of the Milky Way, creating a magical and awe-inspiring experience.</p>
+        <%= link_to "Discover!", spaces_path(query:"nevada") %>
       </div>
       <%= image_tag "image12.jpg" %>
-      <%= link_to "Discover!", spaces_path(query:"nevada") %>
     </div>
+
+    <div id="carouselExample" class="carousel slide">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <%= image_tag("norway5.jpg", class: "d-block w-100 h-100") %>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("norway2.jpg", class: "d-block w-100 h-100") %>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("norway3.jpg", class: "d-block w-100") %>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("norway4.jpg", class: "d-block w-100") %>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("norway1.jpg", class: "d-block w-100") %>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("nevada1.jpg", class: "d-block w-100") %>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("nevada2.jpg", class: "d-block w-100") %>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("nevada3.jpg", class: "d-block w-100") %>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag("nevada4.jpg", class: "d-block w-100") %>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+
   </main>
 </div>

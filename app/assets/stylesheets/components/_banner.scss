@@ -1,28 +1,6 @@
 #homepage {
   min-height: 100vh;
 
-
-  .banner{
-    background-image: url("background.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    //background-color: #b8d9c3;
-    height: 40vh;
-    form {
-    text-align: center;
-    letter-spacing: inherit;
-    font-family: "HCo Gotham SSm",sans-serif;
-    }
-
-    input {
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 100;
-    }
-  }
-
   h1{
     font-size: 40px;
     //font-weight: bolder;
@@ -31,8 +9,8 @@
 
   h2 {
     font-size: 40px;
-    //font-weight: bolder;
-    color: white;
+    text-align: center;
+    color: black;
   }
 
   main {
@@ -65,6 +43,29 @@
       }
 
     }
+
+    .carousel {
+      width: 70%;
+      height: 455px;
+      margin: auto;
+      margin-bottom: 40px;
+
+      .carousel-inner {
+        height: 100%;
+        border-radius: 20px;
+
+        img {
+          object-fit: cover;
+          object-position: center;
+          border-top-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          border-top-left-radius: 20;
+
+
+        }
+      }
+    }
   }
   #video-banner {
     width: 100%;
@@ -76,14 +77,36 @@
     margin-top: -50px;
   }
 
+  .gradient {
+    background-image: linear-gradient(#061907, #838c83);
+    z-index: 100;
+  }
+
+
   .video-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    color: #fff;
+    color: white;
     text-align: center;
+
+
+    form {
+      text-align: center;
+      letter-spacing: inherit;
+      font-family: "HCo Gotham SSm",sans-serif;
+
+      input {
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 100;
+        margin-left: 4px;
+        margin-right: 4px;
+      }
+    }
   }
 
   .video-text h1 {
@@ -107,11 +130,4 @@
     text-decoration: none;
     color: #fff;
   }
-
-    input {
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 100;
-    }
 }
