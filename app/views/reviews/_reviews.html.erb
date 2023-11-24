@@ -3,14 +3,13 @@
   <div class="container">
     <div class="add-review">
       <%= simple_form_for [@space ,@review] do |f| %>
-        <%= f.label :comment, "Your comment..." , class: "review-label"%><br>
+        <%= f.label :comment, "Please, leave your review..." , class: "review-label"%><br>
         <%= f.text_field :comment, class: "review-text-input"%><br>
         <%= f.input :rating ,collection: (0..5)%>
         <%= f.button :submit, class: "review-button" %>
       <% end %>
     </div>
-
-
+    
     <div class="reviews">
       <% @reviews.each do |review| %>
         <div class="review">
