@@ -9,6 +9,9 @@
         <img class="space-image" src="<%= url_for(space.image) %>" alt="Image of <%= space.name %>">
       <% end %>
       <div class="space-content">
+      <%= link_to create_bookmark_index_path(space: space.id), data: {turbo_method: :post} do %>
+        <i class="fa-solid fa-plus"></i>
+      <% end %>
         <div class="space-header">
           <div class="spaces2">
             <%= link_to space.name, space_path(space), class: "space-button" %>

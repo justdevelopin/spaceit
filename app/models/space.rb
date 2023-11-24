@@ -7,7 +7,7 @@ class Space < ApplicationRecord
   validates :price, numericality: { greater_than_or_equal_to: 0 }
 
   belongs_to :user
-  has_many :bookings
-  has_many :reviews
-  has_many :bookmarks
+  has_many :bookings, dependent: :destroy
+  has_many :reviews, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
 end
