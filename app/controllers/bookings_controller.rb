@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
 
     if @booking.save
       respond_to do |format|
-        format.json { render json: { status: :created, booking: @booking } }
+        format.json { render json: { status: :created, booking: @booking, total_price: @booking.total_price } }
         format.html { redirect_to @booking.space, notice: "Booking was successfully created." }
       end
     else

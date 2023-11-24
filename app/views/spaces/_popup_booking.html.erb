@@ -1,27 +1,29 @@
-<div class="popup" id="popup"  data-popup-target="popup">
-  <div class="popup-content">
-    <div class="popup-header">
-      <div class="pop-up-sucess">
-        <%= image_tag "tick_icon.png", alt: "Success Tick Image", class: "tick-icon" %>
+<div class="popup-container d-none" data-popup-target= "popupContainer">
+  <div class="popup" data-popup-target="popup">
+    <div class="popup-content">
+      <div class="popup-header">
+        <div class="pop-up-success">
+          <%= image_tag "tick_icon.png", alt: "Success Tick Image", class: "tick-icon" %>
+        </div>
+        <div class="success-message">
+          <h2>Your booking was made successfully!</h2>
+        </div>
       </div>
-      <div class="sucsess-message">
-        <h2>Your booking was made successfully!</h2>
+      <div class="popup-space">
+        <div class="popup-space-thumb">
+          <%= image_tag "image5.jpg", class:"show-photo"%>
+        </div>
+        <div class="popup-space-details">
+          <p><strong>Name:</strong> <%= @space.name %></p>
+          <p><strong>Address:</strong> <%= @space.address %></p>
+          <p><strong>Price Per Night:</strong> $<%= @space.price %> (Taxes not included)</p>
+          <p><strong>Total Price:</strong>  <span data-popup-target= "totalPrice">0.00</span> + 25$ (Taxes included)</p>
+          <div class="pop-up-summary">
+            <p>We are thrilled to be a part of your upcoming adventure under the stars. Before you set out, be sure to check your email for a detailed itinerary and a list of essential items to bring on your trip. SpaceIt wishes you the very best camping experience, filled with discovery, relaxation, and joy.</p>
+          </div>
+        </div>
       </div>
+      <button type="button" data-action="click->popup#closePopup">Close</button>
     </div>
-  <div class="popup-space">
-    <div class="popup-space-thumb">
-      <%= image_tag "image5.jpg", class:"show-photo"%>
-    </div>
-    <div class="popup-space-details">
-      <p><strong>Name:</strong> <%= @space.name %></p>
-      <p><strong>Address:</strong> <%= @space.address %></p>
-      <p><strong>Price:</strong> $<%= @space.price %> (Taxes are not included)</p>
-      <div class="pop-up-summary">
-        <p>We are thrilled to be a part of your upcoming adventure under the stars. Before you set out, be sure to check your email for a detailed itinerary and a list of essential items to bring on your trip. SpaceIt wishes you the very best camping experience, filled with discovery, relaxation, and joy.</p>
-      </div>
-      </div>
-    </div>
-    <button type="button" data-action="click->popup#closePopup">Close</button>
   </div>
 </div>
-<div class="blur-bg" id="blur" data-blur-target="blur"></div>
