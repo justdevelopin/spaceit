@@ -16,6 +16,8 @@ Booking.destroy_all
 Space.destroy_all
 User.destroy_all
 
+
+
 def random_user
   user = User.new(
     email: Faker::Internet.unique.email,
