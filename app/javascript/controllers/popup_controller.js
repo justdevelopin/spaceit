@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
-  static targets = ["popup", "form"];
+  static targets = ["popup", "blur", "form"];
 
   connect() {
     this.closePopup();
@@ -29,7 +29,7 @@ export default class extends Controller {
     fetch(this.formTarget.action, {
       method: "POST",
       headers: {"Accept": "application/json"},
-      body: new FormData(this.formTarget)
+      body: new FormData(this.formTarget)p
     })
     .then(response => response.json())
     .then((data) => {
